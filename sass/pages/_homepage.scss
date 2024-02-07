@@ -1,7 +1,28 @@
+.homepage {
+    background-color: $background-primary;
+}
+
 .explorer {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    gap: 2em;
+    padding: 3em 1em;
+}
+
+.function {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5em;
+    background-color: $white;
+    padding: 3em 2em 4em 2em;
+}
+
+.restaurant {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
 }

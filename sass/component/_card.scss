@@ -1,0 +1,63 @@
+.function-card {
+  display: flex;
+  padding: calc(2em - 0.7em) 2em;
+  gap: 0 1.5em;
+  border: hidden 1px;
+  border-radius: 20px;
+  background-color: $background-primary;
+  line-height: 1.7em;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+
+  &__number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 5;
+    left: 1.3em;
+    width: 24px;
+    height: 24px;
+    color: $white;
+    background-color: $purple;
+    border: hidden 1px;
+    border-radius: 50%;
+  }
+
+  &__icon {
+    color: rgba(126,126,126,1);
+  }
+
+  .fa-store {
+    color: $purple;
+  }
+
+}
+
+.restaurant-card {
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__tag{
+    align-self: flex-end;
+    position: absolute;
+    z-index: 2;
+    bottom: calc(-6em + 0.5em);
+    right: 2em;
+    border: hidden 1px;
+    border-radius: 2px;
+    padding: 0.5em;
+    background-color: $washed-green;
+    color: $green;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  &__img {
+    object-fit: contain;
+    height: 231px;
+  }
+
+}
