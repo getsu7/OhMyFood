@@ -1,0 +1,19 @@
+.btn-primary {
+    padding: 1em;
+    border: solid 2px;
+    border-radius: 30px;
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    color: $white;
+}
+
+.btn-primary:hover {
+    animation-timing-function: ease-out;
+    animation-duration: 300ms;
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+}
+
+// // While hovering
+// // Change to: "Hover";
+// // Animate: Smart animate;
+
