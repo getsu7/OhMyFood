@@ -1,28 +1,46 @@
+@mixin flex-container-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@mixin flex-container-desktop {
+    display: flex;
+    justify-content: center;
+}
+
 .homepage {
     background-color: $background-primary;
 }
 
 .explorer {
-    display: flex;
+    @include flex-container-mobile;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
     text-align: center;
     gap: 2em;
     padding: 3em 1em;
 }
 
 .function {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    @include flex-container-mobile;
     gap: 1.5em;
     background-color: $white;
-    padding: 3em 2em 4em 2em;
+    padding: 3em 1em 4em 2em;
 }
 
 .restaurant {
-    display: flex;
-    flex-direction: column;
-    padding: 1em;
+    @include flex-container-mobile;
+    padding: 3em 1em 2em 1em;
+    gap: 1em;
+}
+
+@media (min-width: 1440px) {
+
+    .function {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1.5em;
+        background-color: $white;
+        padding: 3em 12em 4em 12em;
+    }
 }
