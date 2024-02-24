@@ -6,16 +6,11 @@
     background: $gradient-purple;
     color: $white;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+    transition: 0.5s;
 }
 
 .btn-primary:hover {
-    animation-timing-function: ease-out;
-    animation-duration: 300ms;
-    background: $gradient-light-purple,
-    linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+    background: $gradient-purple-hover;
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.40);
+    transition: 0.5s;
 }
-
-// // While hovering
-// // Change to: "Hover";
-// // Animate: Smart animate;
-
