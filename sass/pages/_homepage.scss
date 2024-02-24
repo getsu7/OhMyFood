@@ -28,19 +28,44 @@
     padding: 3em 1em 4em 2em;
 }
 
+.function-list {
+    @include flex-container-mobile;
+    gap: 1.5em;
+}
+
 .restaurant {
     @include flex-container-mobile;
     padding: 3em 1em 2em 1em;
     gap: 1em;
 }
 
+.restaurant__list {
+    @include flex-container-mobile;
+    gap: 1em;
+}
+
 @media (min-width: 1440px) {
 
     .function {
-        flex-direction: row;
-        flex-wrap: wrap;
         gap: 1.5em;
         background-color: $white;
         padding: 3em 12em 4em 12em;
+    }
+
+    .function-list {
+        flex-direction: row;
+    }
+
+    .restaurant {
+        padding: 3em 12em 3em 12em;
+
+        &__title {
+            margin-left: 10px;
+        }
+
+        &__list {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
     }
 }
