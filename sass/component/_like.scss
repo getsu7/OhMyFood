@@ -1,0 +1,28 @@
+.like-wrapper {
+    align-self: flex-start;
+    width: 31px;
+    height: 27px;
+}
+
+.like-wrapper .like-wrapper__liked{
+    display: none;
+    transition: all 2s ease-out;
+
+}
+
+.like-wrapper:hover .like-wrapper__liked {
+    display: block;
+    transition: all 2s ease-out;
+
+}
+
+.like-wrapper .like-wrapper__not-liked{
+    display: block;
+    transition: all 2s ease-out;
+
+}
+
+.like-wrapper:hover .like-wrapper__not-liked {
+    display: none;
+    transition: all 2s ease-out;
+}
