@@ -28,7 +28,7 @@
     padding: 3em 1em 4em 2em;
 }
 
-.function-list {
+.function__list {
     @include flex-container-mobile;
     gap: 1.5em;
 }
@@ -44,20 +44,17 @@
     gap: 1em;
 }
 
-@media (min-width: 1440px) {
-
+@media (min-width: 700px) {
     .function {
         gap: 1.5em;
         background-color: $white;
-        padding: 3em 12em 4em 12em;
-    }
 
-    .function-list {
-        flex-direction: row;
+        &__list {
+            flex-direction: row;
+        }
     }
 
     .restaurant {
-        padding: 3em 12em 3em 12em;
 
         &__title {
             margin-left: 10px;
@@ -67,5 +64,15 @@
             flex-direction: row;
             flex-wrap: wrap;
         }
+    }
+}
+
+@media (min-width: 1440px) {
+    .restaurant {
+        padding: 3em 12em 3em 12em;
+    }
+
+    .function {
+        padding: 3em 12em 4em 12em;
     }
 }

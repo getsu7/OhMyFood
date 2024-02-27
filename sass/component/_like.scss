@@ -1,28 +1,33 @@
 .like-wrapper {
+    position: relative;
     align-self: flex-start;
     width: 31px;
     height: 27px;
 }
 
-.like-wrapper .like-wrapper__liked{
-    display: none;
-    transition: all 2s ease-out;
+.like-wrapper__not-liked {
+    opacity: 1;
+    transition: all 1s;
+}
 
+.like-wrapper__liked {
+    opacity: 0;
+    width: 31px;
+    height: 27px;
+    transition: all 1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
 }
 
 .like-wrapper:hover .like-wrapper__liked {
-    display: block;
-    transition: all 2s ease-out;
-
-}
-
-.like-wrapper .like-wrapper__not-liked{
-    display: block;
-    transition: all 2s ease-out;
+    opacity: 1;
+    display: inline-block;
 
 }
 
 .like-wrapper:hover .like-wrapper__not-liked {
-    display: none;
-    transition: all 2s ease-out;
+    opacity: 0;
+    display: inline-block;
 }
