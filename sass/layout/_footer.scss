@@ -1,0 +1,52 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+  background-color: $dark-grey;
+
+  h1 {
+    font-size: 18px;
+    font-weight: 400;
+    color: $white;
+  }
+
+  ul {
+    display: flex;
+    gap: 7px;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    svg.fa-utensils {
+      margin-right: 5px;
+    }
+
+    a {
+      display: flex;
+      gap: 7px;
+      outline: none;
+      text-decoration: none;
+      color: $white;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  footer {
+    flex-direction: row-reverse;
+    justify-content: right;
+    height: 55px;
+    align-items: flex-end;
+    gap: 4em;
+    padding: 2em;
+
+    ul {
+      flex-direction: row;
+      gap: 2em;
+    }
+  }
+}
+
+   
