@@ -1,19 +1,45 @@
 
 header {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    .logo {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        padding: 1em 0;
-        background-color: $white;
-        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-        z-index: 3;
-        img {
-            width: 197px;
-            object-fit: cover;
-        }
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .logo {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1em 0;
+    background-color: $white;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    z-index: 3;
+
+    img {
+      width: 197px;
+      justify-self: center;
+      align-self: center;
+      grid-column: 2/3;
     }
+
+    a {
+      width: fit-content;
+      display: flex;
+      align-items: center;
+
+    }
+  }
+
+  img.back-arrow {
+    height: 20px;
+    width: auto;
+    align-self: center;
+    position: absolute;
+    left: 0;
+    margin-left: 1em;
+  }
+}
+
+@media (min-width: 700px) {
+  .logo {
+    height: 4vh;
+  }
 }

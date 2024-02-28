@@ -1,78 +1,78 @@
 @mixin flex-container-mobile {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 @mixin flex-container-desktop {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .homepage {
-    background-color: $background-primary;
+  background-color: $background-primary;
 }
 
 .explorer {
-    @include flex-container-mobile;
-    align-items: center;
-    text-align: center;
-    gap: 2em;
-    padding: 3em 1em;
+  @include flex-container-mobile;
+  align-items: center;
+  text-align: center;
+  gap: 2em;
+  padding: 3em 1em;
 }
 
 .function {
-    @include flex-container-mobile;
-    gap: 1.5em;
-    background-color: $white;
-    padding: 3em 1em 4em 2em;
+  @include flex-container-mobile;
+  gap: 1.5em;
+  background-color: $white;
+  padding: 3em 1em 4em 2em;
 }
 
 .function__list {
-    @include flex-container-mobile;
-    gap: 1.5em;
+  @include flex-container-mobile;
+  gap: 1.5em;
 }
 
 .restaurant {
-    @include flex-container-mobile;
-    padding: 3em 1em 2em 1em;
-    gap: 1em;
+  @include flex-container-mobile;
+  padding: 3em 1em 2em 1em;
+  gap: 1em;
 }
 
 .restaurant__list {
-    @include flex-container-mobile;
-    gap: 1em;
+  @include flex-container-mobile;
+  gap: 1em;
 }
 
 @media (min-width: 700px) {
-    .function {
-        gap: 1.5em;
-        background-color: $white;
+  .function {
+    gap: 1.5em;
+    background-color: $white;
 
-        &__list {
-            flex-direction: row;
-        }
+    &__list {
+      flex-direction: row;
+    }
+  }
+
+  .restaurant {
+
+    &__title {
+      margin-left: 10px;
     }
 
-    .restaurant {
-
-        &__title {
-            margin-left: 10px;
-        }
-
-        &__list {
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
+    &__list {
+      flex-direction: row;
+      flex-wrap: wrap;
     }
+  }
 }
 
 @media (min-width: 1440px) {
-    .restaurant {
-        padding: 3em 12em 3em 12em;
-    }
+  .restaurant {
+    padding: 3em 12em 3em 12em;
+  }
 
-    .function {
-        padding: 3em 12em 4em 12em;
-    }
+  .function {
+    padding: 3em 12em 4em 12em;
+  }
 }

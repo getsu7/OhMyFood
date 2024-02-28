@@ -22,6 +22,10 @@
   font-weight: 500;
 }
 
+.font-brand {
+  font-family: "Shrikhand";
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -334,7 +338,7 @@ template {
 /**
 * Custom reset
 */
-p, h1, h2, h3 {
+p, h1, h2, h3, h4 {
   margin: 0;
 }
 
@@ -342,6 +346,11 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
 }
 
 .searchbar {
@@ -460,6 +469,31 @@ ul {
   padding: 1em 2em 1em 1em;
 }
 
+.menu-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em;
+  background-color: #FFF;
+  border: hidden;
+  border-radius: 15px;
+  box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1);
+}
+.menu-card .menu-card__info h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.menu-card .menu-card__info h4 {
+  font-size: 15px;
+  font-weight: 300;
+}
+.menu-card__price {
+  display: flex;
+  align-items: flex-end;
+  font-size: 15px;
+  font-weight: 700;
+}
+
 @media (min-width: 700px) {
   .restaurant-card {
     width: calc(50% - 1em);
@@ -470,9 +504,8 @@ ul {
 }
 .like-wrapper {
   position: relative;
-  align-self: flex-start;
-  width: 31px;
-  height: 27px;
+  width: 27px;
+  height: auto;
 }
 
 .like-wrapper__not-liked {
@@ -482,8 +515,8 @@ ul {
 
 .like-wrapper__liked {
   opacity: 0;
-  width: 31px;
-  height: 27px;
+  width: 27px;
+  height: auto;
   transition: all 1s;
   position: absolute;
   top: 0;
@@ -511,7 +544,6 @@ footer {
 footer h1 {
   font-size: 18px;
   font-weight: 400;
-  font-family: "Shrikhand";
   color: rgb(255, 255, 255);
 }
 footer ul {
@@ -554,8 +586,8 @@ header {
 }
 header .logo {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   padding: 1em 0;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
@@ -563,9 +595,29 @@ header .logo {
 }
 header .logo img {
   width: 197px;
-  object-fit: cover;
+  justify-self: center;
+  align-self: center;
+  grid-column: 2/3;
+}
+header .logo a {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+header img.back-arrow {
+  height: 20px;
+  width: auto;
+  align-self: center;
+  position: absolute;
+  left: 0;
+  margin-left: 1em;
 }
 
+@media (min-width: 700px) {
+  .logo {
+    height: 4vh;
+  }
+}
 .homepage {
   background-color: rgb(246, 246, 246);
 }
@@ -634,6 +686,60 @@ header .logo img {
   .function {
     padding: 3em 12em 4em 12em;
   }
+}
+.menu-header {
+  position: relative;
+  top: 0;
+  background-color: rgb(246, 246, 246);
+}
+.menu-header__picture {
+  width: 100%;
+  object-fit: contain;
+}
+.menu-header__info {
+  position: absolute;
+  background-color: rgb(246, 246, 246);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  padding: 2em 1em 1em 1em;
+  border: hidden;
+  border-radius: 30px 30px 0 0;
+}
+.menu-header__info h1 {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.menu {
+  background-color: rgb(246, 246, 246);
+  padding: 1em 1em 3em 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+.menu button {
+  padding: 1em 3em;
+}
+.menu section {
+  margin-bottom: 2em;
+  width: 100%;
+}
+.menu section h2 {
+  width: 40px;
+  font-size: 16px;
+  font-weight: 300;
+  border-bottom: 3px solid rgb(153, 226, 208);
+}
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 1em;
 }
 
 /*# sourceMappingURL=styles.css.map */
