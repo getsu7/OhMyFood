@@ -1,25 +1,30 @@
-.menu-header {
+body {
   position: relative;
-  top: 0;
+}
+
+.menu-picture {
+  width: 100%;
+}
+
+.menu {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  top: 80%;
   background-color: $background-primary;
+  padding: 2em 1em 0 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  border: hidden;
+  border-radius: 30px 30px 0 0;
 
-  &__picture {
+  &__header {
     width: 100%;
-    object-fit: contain;
-  }
-
-  &__info {
-    position: absolute;
-    background-color: $background-primary;
-    bottom: 0;
-    left: 0;
-    right: 0;
     display: flex;
-    justify-content: center;
-    gap: 2em;
-    padding: 2em 1em 1em 1em;
-    border: hidden;
-    border-radius: 30px 30px 0 0;
+    column-gap: 2em;
+    justify-content: space-between;
 
     h1 {
       font-size: 28px;
@@ -27,22 +32,11 @@
     }
   }
 
-}
-
-.menu {
-  background-color: $background-primary;
-  padding: 1em 1em 3em 1em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1em;
-
   button {
     padding: 1em 3em;
   }
 
   section {
-    margin-bottom: 2em;
     width: 100%;
 
     h2 {
@@ -63,3 +57,30 @@
 
 }
 
+@media (min-width: 768px) {
+  .menu {
+    padding-inline: 7em;
+  }
+
+  .menu__header {
+      justify-content: center;
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .menu-picture {
+    height: 30vh;
+    object-fit: cover;
+  }
+
+  .menu {
+    width: 75%;
+    max-width: 1080px;
+    justify-content: center;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 3em 13em 0 13em;
+  }
+  
+}
