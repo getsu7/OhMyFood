@@ -1,8 +1,10 @@
 footer {
+  width: 100vw;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 1em;
-  padding: 1em;
+  padding: 2em;
   background-color: $dark-grey;
 
   h1 {
@@ -35,12 +37,12 @@ footer {
 
 @media (min-width: 1440px) {
   footer {
+    height: 13vh;
     flex-direction: row-reverse;
     justify-content: right;
-    height: 55px;
     align-items: flex-end;
     gap: 4em;
-    padding: 2em;
+    padding: 5em 4em 2em 0;
 
     ul {
       flex-direction: row;
