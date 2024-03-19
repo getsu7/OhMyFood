@@ -10,6 +10,8 @@
 }
 
 .homepage {
+    display: flex; 
+  flex-direction: column;
   background-color: $background-primary;
 }
 
@@ -23,9 +25,17 @@
 
 .function {
   @include flex-container-mobile;
+  align-items: center;
   gap: 1.5em;
   background-color: $white;
-  padding: 3em 1em 4em 2em;
+  padding: 3em 1em 4em 1em;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 1.5em;
+  }
 }
 
 .function__list {
@@ -37,42 +47,70 @@
   @include flex-container-mobile;
   padding: 3em 1em 2em 1em;
   gap: 1em;
-}
 
-.restaurant__list {
-  @include flex-container-mobile;
-  gap: 1em;
-}
-
-@media (min-width: 700px) {
-  .function {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
     gap: 1.5em;
-    background-color: $white;
+  }
+  &__list {
+    @include flex-container-mobile;
+    gap: 1em;
+  }
+}
 
+
+@media (min-width: 768px) {
+  .explorer {
+    h1 {
+      font-size: 40px;
+    }
+  }
+
+  .function {
     &__list {
       flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      max-width: 1053px;
+      gap: 3em;
     }
   }
 
   .restaurant {
-
-    &__title {
-      margin-left: 10px;
-    }
+    align-items: center;
 
     &__list {
       flex-direction: row;
       flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1080px;
+      gap: 20px 20px;
     }
   }
 }
 
 @media (min-width: 1440px) {
+  .homepage {
+    align-items: center;
+    background-color: $background-primary;
+  }
+
   .restaurant {
     padding: 3em 12em 3em 12em;
+    width: fit-content;
+
+    &__list {
+      justify-content: space-between;
+      gap: 50px 50px;
+    }
   }
 
   .function {
     padding: 3em 12em 4em 12em;
+    width: calc(100% - 24em);
+    &__list {
+      justify-content: space-evenly;
+    }
   }
 }
