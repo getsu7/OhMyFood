@@ -370,6 +370,7 @@ a {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   color: white;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+
   transition: 0.5s; }
   .btn-primary:hover {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
@@ -731,5 +732,28 @@ body {
     left: 50%;
     transform: translate(-50%, 0);
     padding: 3em 13em 0 13em; } }
+
+@media (min-width: 768px) {
+  .menu {
+    padding-inline: 7em;
+  }
+  .menu__header {
+    justify-content: center;
+  }
+}
+@media (min-width: 1440px) {
+  .menu-picture {
+    height: 30vh;
+    object-fit: cover;
+  }
+  .menu {
+    width: 75%;
+    max-width: 1080px;
+    justify-content: center;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 3em 13em 0 13em;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
