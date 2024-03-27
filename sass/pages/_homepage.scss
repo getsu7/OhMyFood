@@ -10,9 +10,12 @@
 }
 
 .homepage {
-    display: flex; 
+  opacity: 1;
+  animation: homepage-loading 1000ms 1750ms both;
+  display: flex;
   flex-direction: column;
   background-color: $background-primary;
+  overflow-x: hidden;
 }
 
 .explorer {
@@ -53,6 +56,7 @@
     flex-direction: column;
     gap: 1.5em;
   }
+
   &__list {
     @include flex-container-mobile;
     gap: 1em;
@@ -109,8 +113,19 @@
   .function {
     padding: 3em 12em 4em 12em;
     width: calc(100% - 24em);
+
     &__list {
       justify-content: space-evenly;
     }
+  }
+}
+
+@keyframes homepage-loading {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

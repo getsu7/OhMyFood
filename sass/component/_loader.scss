@@ -1,0 +1,60 @@
+.progress {
+    position: absolute;
+    height: 1em;
+    width: 50%;
+    opacity: 0;
+    padding: 0.2em;
+    border-bottom: transparent 1px;
+    box-sizing: border-box;
+    animation: show 6000ms 0ms both;
+    top: 50vh;
+    left: 25vw;
+
+    &__bar {
+        height: 100%;
+        opacity: 0;
+        border-radius: 15px;
+        border: hidden 1px;
+        transform-origin: left;
+        background-color: $purple;
+        transform: scaleX(0);
+        animation: progress-bar 1500ms 250ms;
+    }
+}
+
+
+@keyframes progress-bar {
+    0% {
+        transform: scaleX(0);
+        opacity: .1;
+    }
+
+    17% {
+        transform: scaleX(.18);
+    }
+
+    24% {
+        transform: scaleX(.4);
+    }
+
+    46% {
+        transform: scaleX(.81);
+    }
+
+    85%,
+    100% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes show {
+    0% {
+        border-bottom: solid 1px;
+        border-radius: 15px;
+        opacity: 1;
+    }
+}
