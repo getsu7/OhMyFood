@@ -11,11 +11,10 @@
 
 .homepage {
   opacity: 1;
-  animation: homepage-loading 1000ms 1750ms both;
   display: flex;
   flex-direction: column;
   background-color: $background-primary;
-  overflow-x: hidden;
+  animation: homepage-loading 1000ms 1750ms both;
 }
 
 .explorer {
