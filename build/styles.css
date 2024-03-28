@@ -634,7 +634,7 @@ a {
   padding: 0.2em;
   border-bottom: transparent 1px;
   box-sizing: border-box;
-  animation: show 6000ms 0ms both;
+  animation: show 1500ms 500ms;
   top: 50vh;
   left: 25vw;
 }
@@ -646,7 +646,7 @@ a {
   transform-origin: left;
   background-color: rgb(147, 86, 220);
   transform: scaleX(0);
-  animation: progress-bar 1500ms 250ms;
+  animation: progress-bar 1500ms 500ms;
 }
 
 @keyframes progress-bar {
@@ -672,6 +672,11 @@ a {
 }
 @keyframes show {
   0% {
+    border-bottom: solid 1px;
+    border-radius: 15px;
+    opacity: 1;
+  }
+  100% {
     border-bottom: solid 1px;
     border-radius: 15px;
     opacity: 1;
@@ -787,7 +792,7 @@ header img.back-arrow {
   display: flex;
   flex-direction: column;
   background-color: rgb(246, 246, 246);
-  animation: homepage-loading 1000ms 1750ms both;
+  animation: homepage-loading 1000ms 2000ms both;
 }
 
 .explorer {
